@@ -27,11 +27,11 @@ namespace WrapperAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<IEcomailRepository, EcomailRepository>();
+            services.AddScoped<IWrapperRepository, WrapperRepository>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "BookAPI", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "WrapperAPI", Version = "v1" });
             });
         }
 
@@ -42,7 +42,7 @@ namespace WrapperAPI
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BookAPI v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WrapperAPI v1"));
             }
 
             app.UseHttpsRedirection();

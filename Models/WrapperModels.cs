@@ -2,16 +2,11 @@
 {
     public class WrapperModels
     {
-        public class Wrapper_Subscriber
+        public class Subscriber
         {
-            public Subscriber_data Subscriber_data { get; set; }
-        }
-
-        public class Subscriber_data
-        {
+            public string Email { get; set; }
             public string Name { get; set; }
             public string Surname { get; set; }
-            public string Email { get; set; }
         }
     }
 }
